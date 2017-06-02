@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/05/2017 07:25:41 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mkyong.web.model.PrsaRejectedTxn" table="prsa_rejected_txn" catalog="transacciones">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="prtFilename" type="string">
+            <column name="PRT_FILENAME" length="16" not-null="true" />
+        </property>
+        <property name="prtProcDte" type="timestamp">
+            <column name="PRT_PROC_DTE" length="19" not-null="true" />
+        </property>
+        <property name="numeroPrsaAdquiriente" type="int">
+            <column name="numero_prsa_adquiriente" not-null="true" />
+        </property>
+        <property name="numeroPrsaEmisor" type="int">
+            <column name="numero_prsa_emisor" not-null="true" />
+        </property>
+        <property name="fiidAdquiriente" type="string">
+            <column name="fiid_adquiriente" length="30" not-null="true" />
+        </property>
+        <property name="fiidEmisor" type="string">
+            <column name="fiid_emisor" length="30" not-null="true" />
+        </property>
+        <property name="redLogica" type="string">
+            <column name="red_logica" length="30" not-null="true" />
+        </property>
+        <property name="codigoRespuesta" type="string">
+            <column name="codigo_respuesta" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

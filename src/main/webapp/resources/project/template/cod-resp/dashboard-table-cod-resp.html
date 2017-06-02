@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="container-fluid">
+
+        <div class="row">
+        <div class="card-header">
+            <h2>Cantidad de transacciones por Código de Respuesta
+                <small></small>
+            </h2>
+
+            <br/>
+            <br/>
+
+            <div class="row">
+                <ng-include src="'template/partials/table-filters-date.html'"></ng-include>
+                <button class="btn filtrar btn-link codR" ng-class="advanced? 'open' : ''" title="Filtros avanzados" ng-click="advanced = !advanced"><i class="tm-icon zmdi zmdi-filter-list"></i></button>
+                <ng-include ng-if="advanced" src="'template/partials/table-filters-all.html'"></ng-include>
+            </div>
+        </div>
+        </div>
+
+        <ul class="nav nav-tabs">
+            <li ui-sref-active="active"><a ui-sref="codRespTable.table">Tabla</a></li>
+            <li ui-sref-active="active"><a ui-sref="codRespTable.grafica">Gráfica</a></li>
+            <li ui-sref-active="active"><a ui-sref="codRespTable.porcent">% Día</a></li>
+            <li ui-sref-active="active"><a ui-sref="codRespTable.porcentCodigo">% Código </a></li>
+        </ul>
+
+        <div ui-view></div>
+
+
+
+
+
+
+    </div>
+</div>
+<style>
+
+</style>

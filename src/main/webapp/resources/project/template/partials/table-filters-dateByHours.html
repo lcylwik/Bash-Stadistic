@@ -1,0 +1,39 @@
+<div class="col-md-12 form-group">
+    <div class="col-md-6">
+        <label>Seleccione el día</label>
+        <input type="text" ng-click="$parent.firstDate = !$parent.firstDate"
+               value="{{filters.firstDate | date: 'MMM dd, yyyy'}}" readonly
+               class="form-control pointer fc-alt"/>
+
+        <datetimepicker ng-if="$parent.firstDate" data-datetimepicker-config="{ minView:'day' }"
+                        class="datetimePicker"
+                        data-on-set-time="onTimeSet(newDate, oldDate, 'firstDate');"
+                        data-ng-model="filters.firstDate"></datetimepicker>
+    </div>
+</div>
+<!--
+<div class="col-md-12 form-group">
+    <div class="col-md-6">
+        <label>Seleccione la hora de Inicio</label>
+        <input type="text" ng-click="$parent.firstHour = !$parent.firstHour"
+               value="{{filters.firstHour | date: 'H:mm a'}}" readonly
+               class="form-control pointer fc-alt"/>
+
+        <datetimepicker ng-if="$parent.firstHour" data-datetimepicker-config="{ minView:'hour', startView:'hour' }"
+                        class="datetimePicker"
+                        data-on-set-time="onTimeSet(newDate, oldDate, 'firstHour');"
+                        data-ng-model="filters.firstHour"></datetimepicker>
+    </div>
+    <div class="col-md-6">
+        <label>Seleccione la hora de Fin</label>
+        <input type="text" ng-click="$parent.lastHour = !$parent.lastHour"
+               value="{{filters.lastHour | date: 'H:mm a'}}" readonly
+               class="form-control pointer fc-alt"/>
+
+        <datetimepicker ng-if="$parent.lastHour" data-datetimepicker-config="{ minView:'hour', startView:'hour' }"
+                        class="datetimePicker"
+                        data-on-set-time="onTimeSet(newDate, oldDate, 'lastHour')"
+                        data-ng-model="filters.lastHour"></datetimepicker>
+    </div>
+</div>
+-->

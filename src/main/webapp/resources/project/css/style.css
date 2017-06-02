@@ -1,0 +1,128 @@
+
+
+
+.nav-tabs{
+
+    border-bottom: 1px solid #ddd;
+}
+
+.nav{
+    list-style: outside none none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.cantDias{
+     float:left;
+    padding-top: 30px;
+}
+
+multiselect .dropdown:not([data-animation]) .dropdown-menu,
+multiselect .btn-group .dropdown-menu,
+multiselect .date-picker .dropdown-menu {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    filter: alpha(opacity=1);
+    display: block;
+}
+.col-md-3{
+    width: 25%;
+}
+.col-md-4{
+    width: 33.333333333%;
+    float: left;
+}
+.col-md-6{
+    width: 50%;
+    float: left;
+}
+.col-md-12{
+    width: 100%;
+    float: left;
+}
+.row{
+    width: 100%;
+}
+.pointer{
+    cursor: pointer;
+}
+.filtros .p-absolute{
+    background: #ffffff;
+    z-index: 100;
+    box-shadow: 3px 3px 3px gray;
+    border-radius: 10px;
+
+
+}
+
+.filtros {
+    margin-top: 10px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+.border{
+    border: medium ridge ;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.filtro{
+    padding-top: 20px;
+}
+.color-danger{
+    background-color: #F8211A;
+    border: 1px solid #f0f0f0;
+    color: white;
+}
+.color-primary{
+    background-color: #68A7F7;
+    border: 1px solid #f0f0f0;
+
+}
+
+.datetimePicker {
+    position: absolute;
+    z-index: 5;
+    box-shadow: 0 0 5px gray;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+th.text-center.sortable.ng-binding.ng-scope {
+    min-width: 75px;
+}
+.table > thead > tr > th:first-child{
+    padding: 10px !important;
+}
+.table > thead > tr > th:last-child{
+    padding: 10px !important;
+}
+div[ng-table-pagination] .ng-table-pager{
+    background: white;
+}
+button.codR{
+    font-size: 16px;
+    position: absolute;
+    margin-top: 23px;
+    border: 1px solid lightgray;
+}
+button.txn{
+    font-size: 16px;
+    position: relative !important;
+    float: right;
+    margin-top: 40px;
+    border: 1px solid lightgray;
+}
+button.filtrar.open i{
+    transform: rotate(200grad);
+}
+
+.fuente{
+    padding-right: 0 !important;
+}

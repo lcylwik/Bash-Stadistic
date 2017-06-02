@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 16/05/2017 05:57:38 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mkyong.web.model.Clave" table="clave" catalog="transaccionesprosa" optimistic-lock="version">
+        <id name="idC" type="java.lang.Integer">
+            <column name="idC" />
+            <generator class="identity" />
+        </id>
+        <property name="elemento" type="string">
+            <column name="elemento" length="30" not-null="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="20" not-null="true" />
+        </property>
+        <set name="estadisticos" table="estadistico" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idClave" />
+            </key>
+            <one-to-many class="com.mkyong.web.model.Estadistico" />
+        </set>
+    </class>
+</hibernate-mapping>

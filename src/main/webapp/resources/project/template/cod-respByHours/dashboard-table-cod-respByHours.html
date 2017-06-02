@@ -1,0 +1,70 @@
+<div class="card">
+    <div class="container-fluid">
+
+        <div class="row">
+        <div class="card-header">
+            <h2>Cantidad de transacciones por Código de Respuesta(Horas)
+                <small></small>
+            </h2>
+
+            <br/>
+            <br/>
+
+            <div class="row">
+                <ng-include src="'template/partials/table-filters-dateByHours.html'"></ng-include>
+                <button class="btn filtrar btn-link" ng-class="advanced? 'open' : ''" title="Filtros avanzados" ng-click="advanced = !advanced"><i class="tm-icon zmdi zmdi-filter-list"></i></button>
+                <ng-include ng-if="advanced" src="'template/partials/table-filters-all.html'"></ng-include>
+            </div>
+        </div>
+        </div>
+
+        <ul class="nav nav-tabs">
+            <li ui-sref-active="active"><a ui-sref="codRespTableHours.table">Tabla</a></li>
+            <li ui-sref-active="active"><a ui-sref="codRespTableHours.grafica">Gráfica</a></li>
+            <li ui-sref-active="active"><a ui-sref="codRespTableHours.porcentDia">% Dia</a></li>
+            <li ui-sref-active="active"><a ui-sref="codRespTableHours.porcentCodigo">% Código</a></li>
+
+        </ul>
+
+        <div ui-view></div>
+
+
+
+
+
+
+    </div>
+</div>
+<style>
+    .datetimePicker {
+        position: absolute;
+        z-index: 5;
+        box-shadow: 0 0 5px gray;
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+
+    th.text-center.sortable.ng-binding.ng-scope {
+        min-width: 75px;
+    }
+    .table > thead > tr > th:first-child{
+        padding: 10px !important;
+    }
+    .table > thead > tr > th:last-child{
+        padding: 10px !important;
+    }
+    div[ng-table-pagination] .ng-table-pager{
+        background: white;
+    }
+    button.filtrar{
+        font-size: 16px;
+        position: absolute;
+        margin-top: 23px;
+        border: 1px solid lightgray;
+    }
+    button.filtrar.open i{
+        transform: rotate(200grad);
+    }
+</style>

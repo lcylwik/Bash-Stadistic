@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/05/2017 07:25:41 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mkyong.web.model.PrsaTxnAceptadas" table="prsa_txn_aceptadas" catalog="transacciones">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="nombreArchivo" type="string">
+            <column name="NOMBRE_ARCHIVO" length="20" not-null="true" />
+        </property>
+        <property name="fechaProcesoTransac" type="timestamp">
+            <column name="FECHA_PROCESO_TRANSAC" length="19" not-null="true" />
+        </property>
+        <property name="fechaConsumoTransac" type="timestamp">
+            <column name="FECHA_CONSUMO_TRANSAC" length="19" not-null="true" />
+        </property>
+        <property name="importeTotalTransac" type="double">
+            <column name="IMPORTE_TOTAL_TRANSAC" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="archNumero" type="int">
+            <column name="ARCH_NUMERO" not-null="true" />
+        </property>
+        <property name="modoEntradaPos" type="string">
+            <column name="MODO_ENTRADA_POS" length="20" not-null="true" />
+        </property>
+        <property name="codigoRespuestaAut" type="string">
+            <column name="CODIGO_RESPUESTA_AUT" length="20" not-null="true" />
+        </property>
+        <property name="redLogica" type="string">
+            <column name="RED_LOGICA" length="20" not-null="true" />
+        </property>
+        <property name="estatusTransaccion" type="int">
+            <column name="ESTATUS_TRANSACCION" not-null="true" />
+        </property>
+        <property name="typ" type="string">
+            <column name="TYP" length="20" not-null="true" />
+        </property>
+        <property name="respCde" type="string">
+            <column name="RESP_CDE" length="20" not-null="true" />
+        </property>
+        <property name="codigoRespuestaIso" type="string">
+            <column name="CODIGO_RESPUESTA_ISO" length="20" not-null="true" />
+        </property>
+        <property name="fechaLiq" type="timestamp">
+            <column name="FECHA_LIQ" length="19" not-null="true" />
+        </property>
+        <property name="partitionId" type="int">
+            <column name="PARTITION_ID" not-null="true" />
+        </property>
+        <property name="numeroPrsaAdquiriente" type="int">
+            <column name="numero_prsa_adquiriente" not-null="true" />
+        </property>
+        <property name="numeroPrsaEmisor" type="int">
+            <column name="numero_prsa_emisor" not-null="true" />
+        </property>
+        <property name="fiidAdquiriente" type="string">
+            <column name="fiid_adquiriente" length="30" not-null="true" />
+        </property>
+        <property name="fiidEmisor" type="string">
+            <column name="fiid_emisor" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

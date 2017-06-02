@@ -1,0 +1,67 @@
+<div class="container-fluid" data-ng-controller="tableCtrl as tctrl">
+
+    <div class="card-header">
+        <div class="card-header row">
+            <h2>Listado de Transacciones
+                <small></small>
+            </h2>
+            <div class="row">
+
+                <button class="btn filtrar btn-link txn" ng-class="advanced? 'open' : ''" title="Filtros avanzados" ng-click="advanced = !advanced"><i class="tm-icon zmdi zmdi-filter-list"></i></button>
+
+                <ng-include ng-if="advanced" src="'template/partials/table-filters-all.html'"></ng-include>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table ng-table="tableParams" class="table table-striped table-vmiddle"
+                               show-filter="true">
+                            <tr ng-repeat="w in $data">
+                                <td data-title="'Archivo'">
+                                    {{ w.prtFilename }}
+                                </td>
+
+                                <td data-title="'Fecha de Proceso'">
+                                    {{ w.prtProcDte | date : "yyyy/MM/dd" }}
+                                </td>
+                                <td data-title="'Red Logica'">
+                                    {{ w.redLogica }}
+                                </td>
+                                <td data-title="'Codigo de Respuesta'">
+                                    {{ w.codigoRespuesta }}
+                                </td>
+                                <td data-title="'fiidEmisor'">
+                                    {{ w.numeroPrsaAdquiriente }}
+                                </td>
+                                <td data-title="'# Prosa Emisor'">
+                                    {{ w.numeroPrsaEmisor }}
+                                </td>
+                                <td data-title="'FIID Adquiriente'">
+                                    {{ w.fiidAdquiriente }}
+                                </td>
+                                 <td data-title="'FIID Emisor'">
+                                    {{ w.fiidEmisor }}
+                                </td>
+
+
+                            </tr>
+                        </table>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+

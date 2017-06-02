@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="container-fluid">
+
+
+        <div class="row">
+            <div class="col-md-12 fuente">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table ng-table="tableFuente" class="table table-striped table-vmiddle"
+                               show-filter="true">
+                            <thead>
+                            <th>Archivo</th>
+                            <th ng-repeat="obj in getColumnas()">{{obj}}</th>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="fuente in $data">
+
+                                <td >
+                                    {{fuente.fuente }}
+                                </td>
+                                <td ng-repeat="day in fuente.days track by day.id">
+                                    {{ day.value }}
+                                </td>
+
+                                <!--<td ng-repeat="dia in getColumnas()">-->
+                                    <!--{{getCantTransacciones(fuente, dia)}}-->
+                                <!--</td>-->
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+        </div>
+
+
+    </div>
+</div>

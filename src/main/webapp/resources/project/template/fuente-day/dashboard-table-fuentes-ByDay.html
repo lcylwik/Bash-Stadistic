@@ -1,0 +1,63 @@
+<div class="card">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="card-header">
+                <h2>Cantidad de transacciones por archivo
+                    <small></small>
+                </h2>
+
+
+                <div class="col-md-3 cantDias">
+                    <div class="form-group col-md-12 ">
+                        <label>Cantidad de días: </label>
+                        <input type="number" class="form-control" ng-model="cantDias" ng-change="tableFuente = tctrl.generateTableParams()"/>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+
+                <div class="row">
+                    <button class="btn filtrar btn-link txn" ng-class="advanced? 'open' : ''" title="Filtros avanzados" ng-click="advanced = !advanced"><i class="tm-icon zmdi zmdi-filter-list"></i></button>
+                    <ng-include ng-if="advanced" src="'template/partials/table-filters-all.html'"></ng-include>
+                </div>
+            </div>
+        </div>
+
+        <ul class="nav nav-tabs">
+            <li ui-sref-active="active"><a ui-sref="tableFuentesDay.table">Tabla</a></li>
+            <li ui-sref-active="active"><a ui-sref="tableFuentesDay.grafica">Gráfica</a></li>
+            <!--<li ui-sref-active="active"><a ui-sref="">% Día</a></li>-->
+            <!--<li ui-sref-active="active"><a ui-sref="">% Código </a></li>-->
+        </ul>
+
+        <div ui-view></div>
+
+
+
+
+
+
+    </div>
+</div>
+<style>
+
+    .table > thead > tr > th:first-child{
+        padding: 10px !important;
+    }
+    .table > thead > tr > th:last-child{
+        padding: 10px !important;
+    }
+    div[ng-table-pagination] .ng-table-pager{
+        background: white;
+    }
+    button.filtrar{
+        font-size: 16px;
+        position: absolute;
+        margin-top: 23px;
+        border: 1px solid lightgray;
+    }
+    button.filtrar.open i{
+        transform: rotate(200grad);
+    }
+</style>

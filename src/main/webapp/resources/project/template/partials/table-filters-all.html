@@ -1,0 +1,33 @@
+<div class="col-md-12 form-group">
+    <div class="col-md-6 form-group" ng-if="!(catalogo.prtFilename.length == 1 && catalogo.prtFilename[0] == '') && catalogo.prtFilename.length > 0">
+        <label>Nombre de Archivo</label>
+        <multiselect class="pointer fc-alt" ng-model="filters.all.prtFilename" options="catalogo.prtFilename" show-search="true">
+        </multiselect>
+    </div>
+    <div class="col-md-6 form-group" ng-if="!(catalogo.redLogica.length == 1 && catalogo.redLogica[0] == '') && catalogo.redLogica.length > 0">
+        <label>Red lógica</label>
+        <multiselect class="pointer fc-alt" ng-model="filters.all.redLogica" options="catalogo.redLogica">
+        </multiselect>
+    </div>
+    <div class="col-md-6 form-group" ng-if="!(catalogo.numeroPrsaAdquiriente.length == 1 && catalogo.numeroPrsaAdquiriente[0] == '') && catalogo.numeroPrsaAdquiriente.length > 0">
+        <label># Prosa Adquiriente</label>
+        <multiselect class="pointer fc-alt" ng-model="filters.all.numeroPrsaAdquiriente" options="catalogo.numeroPrsaAdquiriente">
+        </multiselect>
+    </div>
+    <div class="col-md-6 form-group" ng-if="!(catalogo.numeroPrsaEmisor.length == 1 && catalogo.numeroPrsaEmisor[0] == '') && catalogo.numeroPrsaEmisor.length > 0">
+        <label># Prosa Emisor</label>
+        <multiselect class="pointer fc-alt" ng-model="filters.all.numeroPrsaEmisor" options="catalogo.numeroPrsaEmisor">
+        </multiselect>
+    </div>
+    <div class="col-md-6 form-group" ng-if="!(catalogo.fiidAdquiriente.length == 1 && catalogo.fiidAdquiriente[0] == '') && catalogo.fiidAdquiriente.length > 0">
+        <label>FIID Adquiriente</label>
+        <multiselect class="pointer fc-alt" ng-model="filters.all.fiidAdquiriente" options="catalogo.fiidAdquiriente">
+        </multiselect>
+    </div>
+    <div class="col-md-6 form-group" ng-if="!(catalogo.fiidEmisor.length == 1 && catalogo.fiidEmisor[0] == '') && catalogo.fiidEmisor.length > 0">
+        <label>FIID Emisor</label>
+        <multiselect class="pointer fc-alt" ng-model="filters.all.fiidEmisor" options="catalogo.fiidEmisor">
+        </multiselect>
+    </div>
+
+</div>

@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-12">
+
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table ng-table="tableParams" class="table table-striped table-vmiddle" show-filter="true">
+                    <thead>
+                    <tr>
+                        <th>Código de Respuesta</th>
+                        <th ng-repeat="column in columnas" ng-if="column.field != 'Total'"
+                            class="text-center sortable" ng-class="{
+                                    'sort-asc': tableParams.isSortBy(column.field, 'asc'),
+                                    'sort-desc': tableParams.isSortBy(column.field, 'desc')
+                                  }"
+                            ng-click="tableParams.sorting(column.field, tableParams.isSortBy(column.field, 'asc') ? 'desc' : 'asc')"
+                        >{{column.title}}
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="cod in $data">
+                        <td>
+                            {{ cod.title }}
+                        </td>
+                        <td ng-repeat="dia in cod.dias" sortable="'{{dia.field}}'" ng-if="dia.field != 'Total'">
+                            {{cod.dias[cod.dias.length -1].cantidad == 0 ? 0 : dia.cantidad*100/cod.dias[cod.dias.length -1].cantidad | number:2}}%
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <br/>
+    </div>
+</div>

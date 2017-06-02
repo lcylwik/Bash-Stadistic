@@ -1,0 +1,24 @@
+<div class="col-md-12 form-group">
+    <div class="col-md-6">
+        <label>Seleccione la fecha de Inicio</label>
+        <input type="text" ng-click="$parent.firstDate = !$parent.firstDate"
+               value="{{filters.firstDate | date: 'MMM dd, yyyy'}}" readonly
+               class="form-control pointer fc-alt"/>
+
+        <datetimepicker ng-if="$parent.firstDate" data-datetimepicker-config="{ minView:'day' }"
+                        class="datetimePicker"
+                        data-on-set-time="onTimeSet(newDate, oldDate, 'firstDate');"
+                        data-ng-model="filters.firstDate"></datetimepicker>
+    </div>
+    <div class="col-md-6">
+        <label>Seleccione la fecha de Fin</label>
+        <input type="text" ng-click="$parent.lastDate = !$parent.lastDate"
+               value="{{filters.lastDate | date: 'MMM dd, yyyy'}}" readonly
+               class="form-control pointer fc-alt"/>
+
+        <datetimepicker ng-if="$parent.lastDate" data-datetimepicker-config="{ minView:'day' }"
+                        class="datetimePicker"
+                        data-on-set-time="onTimeSet(newDate, oldDate, 'lastDate')"
+                        data-ng-model="filters.lastDate"></datetimepicker>
+    </div>
+</div>
